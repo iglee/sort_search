@@ -22,3 +22,13 @@ def bubble_sort(items):
         return items
     else:
         return bubble_sort(items)
+
+def selection_sort(items):
+    for i in range(len(items)-1):
+        min_idx = i
+        for j in range(i, len(items)):
+            if min_idx > items[j]:
+                min_idx = j
+        if min_idx != i:
+            items[i], items[min_idx] = items[min_idx], items[i]
+    return items
